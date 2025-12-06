@@ -11,15 +11,14 @@ import cors from "cors";
 const app = express();
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: [
-      "https://project-mangement-henna.vercel.app",
-      "http://localhost:5000",
-    ],
-    // credentials: true,
-  })
-);
+const corsOptions = {
+  origin: [
+    "https://project-mangement-henna.vercel.app",
+    "http://localhost:5000",
+  ],
+  credentials: true,
+};
+
 app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
