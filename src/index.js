@@ -14,7 +14,7 @@ app.use(express.json());
 const corsOptions = {
   origin: [
     "https://project-mangement-henna.vercel.app",
-    "http://localhost:5000",
+    "http://localhost:5173",
   ],
   credentials: true,
 };
